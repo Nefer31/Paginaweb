@@ -5,34 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Detalles MilAu</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="icon" type="image/png" href="">
+    <link rel="icon" type="image/png" href="./Source/Imagenes/Logos/Logo2.jpeg">
+    <script src="https://cdn.jsdelivr.net/npm/confetti.js"></script>
+    <script src="./js/animacion.js"></script>
+
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html"><img src="./Souce/Imagenes/Logo2.jpeg" alt="Logo de la marca"></a>
+            <a href="index.html"><img src="./Source/Imagenes/Logos/Logo2.jpeg" alt="Logo de la marca"></a>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="./Souce/Papeleria.html">Papeleria</a></li>
-                <li><a href="./Souce/Piñateria.html">Piñateria</a></li>
-                <li><a href="./Souce/FechasEspeciales.html">Fechas especiales</a></li>
+                <li><a href="Papeleria.html">Papeleria</a></li>
+                <li><a href="Piñateria.html">Piñateria</a></li>
+                <li><a href="FechasEspeciales.html">Fechas especiales</a></li>
                 <li class="icon_header"><a href="./"><img class="icon_header" src="./Souce/Imagenes/instagam_109863.png" alt=""></a></li>
                 <li class="icon_header"><a href="https://api.whatsapp.com/send/?phone=573043277960"><img class="icon_header" src="./Souce/Imagenes/whatsapp_109861.png" alt=""></a></li>
             </ul>
         </nav>
-
-        <input id="searchbar" onkeyup="search_categoria()" type="text" name="search" placeholder="Buscar">
-
-        <script src="js/navegador.js"></script>
     </header>
 
     <main>
         <div class="papeleria-principal">
-            <div class="contenedor">
+            <div class="contenedorprincipal">
                 <h3 class="titulo">¡BIENVENIDO A DETALLES MILAU!</h3>
                 <p class="descripcion">
                     Aquí encontrarás la mejor variedad de productos de papelería en tu región.
@@ -41,8 +40,21 @@
         </div>
     </main>
     <main>
+      <section class="services contenedor" id="servicio">
+          <h2 class="subtitulo">Sobre nosotros</h2>
+          <div class="contenedor-servicio">
+              <img class="quines_somos" src="./Souce/Imagenes/Logo.jpeg" alt="">
+              <div class="checklist-servicio">
+                  <div class="service">
+                      <p>Nuestra tienda se originó con el objetivo principal de lograr que los clientes se sientan sastifechos por cada uno de los productos que adquieren y con el servicio que les estamos brindando, es decir, productos de excelente calidad. </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </main>
+    <main>
         <section class="services contenedor" id="servicio">
-            <h2 class="subtitulo">Nuestro servicio</h2>
+            <h2 class="subtitulo">Nuestros servicios</h2>
             <div class="contenedor-servicio">
                 <img class="quines_somos" src="./Souce/Imagenes/Logo.jpeg" alt="">
                 <div class="checklist-servicio">
@@ -65,32 +77,27 @@
 
 
     <section id="blog">
-        <div class="contenedor">
-            <article class="caja">
-                <a href="./Souce/Papeleria.html"><img src="./Souce/Imagenes/papeleria.jpg" alt="fail"></a>
-                <h4>Papeleria</h4>
-            </article>
-            <article class="caja">
-                <a href="./Souce/Piñateria.html"><img src="./Souce/Imagenes/piñateria.jpg" alt="fail"></a>
-                <h4>Piñateria</h4>
-            </article>
-            <article class="caja">
-                <a href="./Souce/FechasEspeciales.html"><img src="./Souce/Imagenes/fechasespeciales.jpg" alt="fail"></a>
-                <h4>Fechas especiales</h4>
-            </article>
-        </div>
-    </section>
-    <section id="informacion">
-        <div class="info">
-            <h3>Mas informacion</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Iusto ab error mollitia id.
-                 Placeat iure tenetur dolor possimus voluptatem sapiente?
-            </p>
+      <div class="contenedor">
+          <article class="caja tarjeta">
+              <a href="Papeleria.html"><img src="./Source/Imagenes/Papeleria/Carpetas3.jpg" alt="fail"></a>
+              <h4>Papeleria</h4>
+          </article>
+          
+          <article class="caja tarjeta">
+              <a href="Piñateria.html"><img src="./Source/Imagenes/Piñateria/Globos3.jpg" alt="fail"></a>
+              <h4>Piñateria</h4>
+          </article>
+          
+          <article class="caja tarjeta">
+              <a href="FechasEspeciales.html"><img src="./Source/Imagenes/Fechas Especiales/Desayuno7.jpg" alt="fail"></a>
+              <h4>Fechas especiales</h4>
+          </article>
+      </div>
+  </section>
+  
+   
 
         </div>
-    </section>
         <div class="pie ">
             <footer id="contacto ">
                 <div class="contenedor footer-content ">
@@ -99,5 +106,4 @@
                     </div>
             </footer>
             
-    <script src="/Js/buscador.js"></script>
 </html>

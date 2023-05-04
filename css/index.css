@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-    background-color: #fa61e0;
+    background-color: #9d468e;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -67,7 +67,7 @@ body {
 }
 
 .header .nav-links li a:hover {
-    color: #971365;
+    color: #dd92c0;
 }
 
 #searchbar{
@@ -94,7 +94,7 @@ input[type=text]:focus {
     font-size: 16px;
     min-height: 36.62em;
     color: #fff;
-    background: linear-gradient(rgba(0, 0, 0, 0.192) 0%, rgba(0, 0, 0, 0.726) 100%), url(../Souce/Imagenes/Fondo2.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, 0.558) 0%, rgba(0, 0, 0, 0.726) 100%), url(../Source/Imagenes/Logos/Portada2.jpg);
     background-position: center center;
     background-size: cover;
     margin-bottom: 3.12em;
@@ -102,17 +102,19 @@ input[type=text]:focus {
     align-items: end;
   }
   
-  .contenedor {
-    display: block;
+  .contenedorprincipal {
+    text-align: center;
+
   }
   
   .papeleria-principal .titulo {
-    margin: 20px;
+    text-align: center;
+    margin: 5px;
     font-size: 70px;
   }
   
   .papeleria-principal .descripcion {
-    margin: 20px;
+    text-align: center;
     font-size: 25px;
   }
   
@@ -216,8 +218,22 @@ input[type=text]:focus {
     max-width: 300px;
 }
 
-#blog .contenedor :hover img {
-    box-shadow: 0px 0px 3px 3px #000000;
+
+.caja img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caja h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.caja:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
  /* Estilos para el pie de página */
@@ -237,3 +253,4 @@ input[type=text]:focus {
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
+/* Animación */
