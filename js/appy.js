@@ -9,8 +9,6 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
-const timeh= document.getElementById("HoraActual");
-const timehora= document.getElementById("Tiempo");
 
 
 let carrito = []
@@ -46,9 +44,7 @@ stockProductos.forEach((producto) => {
     <img src=${producto.img} alt="">
     <h3>${producto.nombre}</h3>
     <p>${producto.desc}</p>
-    <p>Subastador: ${producto.autor}</p>
-    <p>Publicación: ${producto.Tiempo}</p>
-    <p class="precioProudcto">Precio:$ ${producto.precio}</p>
+    <p class="precioProudcto">Precio: $ ${producto.precio}</p>
     <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
     `
     contenedorProductos.appendChild(div)
