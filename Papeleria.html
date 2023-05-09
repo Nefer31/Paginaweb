@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papeleria</title>
     <link rel="shortcut icon" type="image/png" href="./Source/Imagenes/Logos/LogoPrincipal.png">
-    <link rel="stylesheet" href="./css/papeleria.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="./css/papeleria.css">
 </head>
 <body>
     <header class="header">
@@ -23,33 +25,28 @@
               </ul>
             </nav>
         </header>
-
+    
         <main>
-          <div class="papeleria-principal">
-            <div class="contenedorprincipal">
-              <h3 class="titulo">PAPELERÍA</h3>
-              <p class="descripcion">Bienvenido a nuestra tienda en línea. Aquí encontrarás una amplia variedad de productos para tus necesidades de escritura, dibujo y organización. ¡Explora nuestros productos y haz tu pedido ahora!</p>
+          <div class="slider">
+            <div class="slide active">
+              <img src="./Source/Imagenes/Logos/Papeleria.png" alt="Imagen 1">
+            </div>
+            <div class="slide">
+              <img src="./Source/Imagenes/Logos/Papeleria2.png" alt="Imagen 2">
+            </div>
+            <div class="slide">
+              <img src="./Source/Imagenes/Logos/Papeleria3.png" alt="Imagen 3">
             </div>
           </div>
+          <div class="titulo-slider">
+            <h2>PAPELERÍA</h2>
+            <p>Bienvenido a nuestra tienda en línea de papelería. Aquí encontrarás una amplia variedad de productos para tus necesidades de escritura, dibujo y organización. ¡Explora nuestros productos y haz tu pedido ahora!</p>
+          </div>
         </main>
-        <div class="slider">
-          <div class="slide active">
-            <img src="Source/Imagenes/Logos/Papeleria.png" alt="Imagen 1">
-          </div>
-          <div class="slide">
-            <img src="Source/Imagenes/Logos/Papeleria2.png" alt="Imagen 2">
-          </div>
-          <div class="slide">
-            <img src="Source/Imagenes/Logos/Papeleria3.png" alt="Imagen 3">
-          </div>
-          <div class="slide">
-            <img src="Source/Imagenes/Logos/Papeleria4.png" alt="Imagen 4">
-          </div>
-          <div class="slide">
-            <img src="Source/Imagenes/Logos/Papeleria5.png" alt="Imagen 5">
-          </div>
-        </div>
         
+        
+            
+          
              <!-- <h1 id="titulo" class="titulo">NFT</h1> -->
              <p class="TituloProducto">Nuestros productos</p>
       <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
