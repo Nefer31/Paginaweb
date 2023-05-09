@@ -4,30 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FechasEspeciales</title>
+    <title>Fechas Especiales</title>
+    <link rel="icon" type="image/png" href="./Source/Imagenes/Logos/LogoPrincipal.png">
     <link rel="stylesheet" href="./css/fechas.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="index.html"><img src="./Source/Imagenes/Logos/Logo2.jpeg" alt="Logo de la marca"></a>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="Papeleria.html">Papeleria</a></li>
-                <li><a href="Piñateria.html">Piñateria</a></li>
-                <li><a href="FechasEspeciales.html">Fechas especiales</a></li>
-                <li class="icon_header"><a href="./"><img class="icon_header" src="./Souce/Imagenes/instagam_109863.png" alt=""></a></li>
-                <li class="icon_header"><a href="https://api.whatsapp.com/send/?phone=573043277960"><img class="icon_header" src="./Souce/Imagenes/whatsapp_109861.png" alt=""></a></li>
-            </ul>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"><img src="./Source/Imagenes/Logos/Logo2.jpeg" alt="Logo de la marca"></a>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="Papeleria.html">Papeleria</a></li>
+            <li><a href="Piñateria.html">Piñateria</a></li>
+            <li><a href="FechasEspeciales.html">Fechas especiales</a></li>
+            <li class="icon_header"><a href="./"><img class="icon_header" src="./Souce/Imagenes/instagam_109863.png" alt=""></a></li>
+            <li class="icon_header"><a href="https://api.whatsapp.com/send/?phone=573043277960"><img class="icon_header" src="./Souce/Imagenes/whatsapp_109861.png" alt=""></a></li>
+          </ul>
         </nav>
-        <input id="searchbar" onkeyup="search_categoria()" type="text" name="search" placeholder="Buscar">
-        
-        <!-- <h1 id="titulo" class="titulo">NFT</h1> -->
-        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
-        <main id="contenedor-productos">
-
-        <script src="js/navegador.js"></script>
     </header>
+
+    <main>
+      <div class="papeleria-principal">
+        <div class="contenedorprincipal">
+          <h3 class="titulo">PRODUCTOS PARA CELEBRACIONES ESPECIALES</h3>
+          <p class="descripcion">Bienvenido a nuestra tienda en línea. Aquí encontrarás una amplia variedad de productos para tus fiestas y celebraciones especiales. Ya sea para cumpleaños, bodas, graduaciones u otras fechas importantes, tenemos todo lo que necesitas para hacer de tu próxima celebración un éxito. ¡Explora nuestros productos y haz tu pedido ahora!</p>
+        </div>
+      </div>
+    </main>
+    <div class="slider">
+      <div class="slide active">
+        <img src="Source/Imagenes/Logos/Papeleria.png" alt="Imagen 1">
+      </div>
+      <div class="slide">
+        <img src="Source/Imagenes/Logos/Papeleria2.png" alt="Imagen 2">
+      </div>
+      <div class="slide">
+        <img src="Source/Imagenes/Logos/Papeleria3.png" alt="Imagen 3">
+      </div>
+      <div class="slide">
+        <img src="Source/Imagenes/Logos/Papeleria4.png" alt="Imagen 4">
+      </div>
+      <div class="slide">
+        <img src="Source/Imagenes/Logos/Papeleria5.png" alt="Imagen 5">
+      </div>
+    </div>
+    
+         <!-- <h1 id="titulo" class="titulo">NFT</h1> -->
+         <p class="TituloProducto">Nuestros productos</p>
+  <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+  <input id="searchbar" onkeyup="search_categoria()" type="text" name="search" placeholder="Buscar Articulo">
+  <main id="contenedor-productos"></main>
+                                                                                                                                                                                                       
+  <!-- <input type="number" min = 0> -->
+  
+  <div class="modal-contenedor">
+    <div class="modal-carrito">
+      <h3>Carrito</h3>
+      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+  <div id="carrito-contenedor">
+  </div>
+  
+  <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+  <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+  <button id="compra2" class="boton-agregar">Comprar</button>
+  </div>
+
+  </div>
+  <img class="whatsapp" src="./Source/Imagenes/Logos/whatsapp_109861.png"></img>
+<footer>
+<h1>Contactanos</h1>
+</footer>
+
+    <script src="./js/FechasEspeciales.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/buscador.js"></script>
+<script src="./js/animacion.js"></script>
+
+</header>
 </body>
 </html>
