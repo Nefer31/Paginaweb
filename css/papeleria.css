@@ -305,19 +305,43 @@ p{
   text-align: center;
   
 }
-
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background-color: #9d468e;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-
+  padding: 50px 0;
+  color: #ffffff;
+  text-align: center; /* Agregamos esta propiedad para centrar el contenido del footer */
 }
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+footer ul li a:hover {
+  color: #f5a3e3;
+}
+
+
 .papeleria-principal {
   font-size: 16px;
   min-height: 500px; /* ajusta esta altura según tu diseño */
@@ -377,10 +401,27 @@ footer {
   height: 100%;
   object-fit: cover;
 }
-.whatsapp{
-  height: 10%;
-  width: 5%;
-  position: fixed;
-  left: 1750px;
-  bottom: 63px;
+.whatsapp {
+  top: 70px;
+  right: 20px;
+  height: 8%;
+  width: 4%;
+  transition: all 0.3s ease-in-out; /* Transición para la animación */
+}
+
+.instagram {
+  top: 20px;
+  right: 70px;
+  height: 8%;
+  width: 4%;
+  transition: all 0.3s ease-in-out; /* Transición para la animación */
+}
+
+/* Estilo para cuando se pasa el mouse por encima del elemento */
+.whatsapp:hover {
+  transform: translateY(-10px); /* Desplazamiento hacia arriba */
+}
+
+.instagram:hover {
+  transform: translateY(-10px); /* Desplazamiento hacia arriba */
 }

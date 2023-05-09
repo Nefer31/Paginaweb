@@ -379,9 +379,9 @@ footer {
   object-fit: cover;
 }
 .whatsapp{
-  height: 10%;
-  width: 5%;
+  height: 8%;
+  width: 4%;
   position: fixed;
-  left: 1750px;
-  bottom: 63px;
+  left: 1780px;
+  bottom: 100px;
 }
