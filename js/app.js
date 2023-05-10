@@ -106,7 +106,7 @@ const actualizarCarrito = () => {
       div.className = 'productoEnCarrito';
       div.innerHTML = `
         <p>${prod.nombre}</p>
-        <p>Precio: COP ${prod.precio.toLocaleString('es-CO')}</p>
+        <p>Precio: $ ${prod.precio.toLocaleString('es-CO')} COP</p>
         <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
         <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar">-<i class="fas fa-trash-alt"></i></button>
         <button onclick="agregarAlCarrito(${prod.id})" class="boton-mas">+<i class="fas fa-shopping-cart"></i></button>
