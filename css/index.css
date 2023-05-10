@@ -12,27 +12,32 @@ body {
     background-color: #ffffff;
 }
 
-.header {
-    background-color: #9d468e;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 85px;
-    padding: 5px 10%;
-    position: fixed;
-    width: 100%;
-}
 
+.header {
+  background-color: #9d468e;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+  position: fixed;
+  width: 100%;
+  bottom: 855px;
+  z-index: 9999;
+
+}
 .header .logo {
-    cursor: pointer;
-    margin-right: auto;
+  cursor: pointer;
+  margin-right: auto;
 }
 
 .header .logo img {
-    height: 70px;
-    width: auto;
-    transition: all 0.3s;
-    border-radius: 200px 200px 200px 200px;
+  height: 70px;
+  width: auto;
+  position: relative;
+  top: 4px;
+  transition: all 0.3s;
+  border-radius: 200px 200px 200px 200px;
 }
 
 
@@ -76,6 +81,7 @@ body {
     font-size: 20px;
 }
 
+
 input[type=text] {
     width: 30%;
     -webkit-transition: width 0.15s ease-in-out;
@@ -85,37 +91,6 @@ input[type=text] {
 input[type=text]:focus {
     width: 70%;
 }
-  
-  /* Estilos para la sección principal */
-  .papeleria-principal {
-    font-size: 16px;
-    min-height: 36.62em;
-    color: #fff;
-    background: linear-gradient(rgba(0, 0, 0, 0.558) 0%, rgba(0, 0, 0, 0.726) 100%), url(../Source/Imagenes/Logos/Portada2.jpg);
-    background-position: center center;
-    background-size: cover;
-    margin-bottom: 3.12em;
-    display: flex;
-    align-items: end;
-  }
-  
-  .contenedorprincipal {
-    text-align: center;
-
-  }
-  
-  .papeleria-principal .titulo {
-    text-align: center;
-    margin: 5px;
-    font-size: 70px;
-  }
-  
-  .papeleria-principal .descripcion {
-    text-align: center;
-    font-size: 25px;
-  }
-  
-  
   
   
   /* Estilos para la sección de servicios */
@@ -140,6 +115,7 @@ input[type=text]:focus {
     margin-right: 2rem;
     width: 500px;
     border-radius: 25%;
+    text-align: center;
   }
   
   .checklist-servicio {
@@ -147,25 +123,93 @@ input[type=text]:focus {
     flex-direction: column;
   }
   
-  .service {
-    margin: 1rem;
-  }
-  
-  .n-service {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .number {
-    color: #f00;
-  }
-  
-  .service p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  
+  /* Estilos para la sección "Nuestros servicios" */
+.services:nth-of-type(2) {
+  background-color: #fff;
+}
+
+.n-service {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.number {
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 10px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.contenedor-servicio {
+  display: flex;
+  align-items: flex-start;
+}
+
+.quienes-somos {
+  margin-right: 20px;
+}
+
+.logobajo {
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  top: 130px;
+  right: 135px;
+}
+
+.checklist-servicio {
+  flex-grow: 1;
+}
+
+.service {
+  max-width: 600px;
+}
+
+.subtitulo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.Bibliografia {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.titulocards{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+blockquote {
+  font-style: italic;
+  color: #888;
+}
+
+.bibliografia {
+  font-style: italic;
+  color: #888;
+  margin-top: 10px;
+}
+
+
+
+
   /* Estilos para la sección del blog */
   #blog {
     padding: 2rem;
@@ -293,4 +337,70 @@ footer ul li a:hover {
 
 .instagram:hover {
   transform: translateY(-10px); /* Desplazamiento hacia arriba */
+}
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.784) 0%, rgba(0, 0, 0, 0.87) 100%);
+  z-index: 1;
+}
+
+.slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.titulo-slider {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.titulo-slider h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.titulo-slider p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: background-color 0.5s ease-out;
+}
+
+.slide.active {
+  opacity: 1;
 }
