@@ -44,10 +44,13 @@
     
          <!-- <h1 id="titulo" class="titulo">NFT</h1> -->
          <p class="TituloProducto">Nuestros productos</p>
-  <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
-  <div class="search-container">
-    <input id="searchbar" onkeyup="search_categoria()" type="text" name="search" placeholder="Buscar Artículo" class="search-input">
-  </div>
+         <button id="boton-carrito"><p class="carritoicon">🛒</p>
+          <i class="fas fa-shopping-cart"></i>
+          <span id="contadorCarrito" class="contadorCarrito">0</span>
+        </button>  
+        <div class="search-container">
+          <input id="searchbar" onkeyup="search_categoria()" type="text" name="search" placeholder="Buscar Artículo" class="search-input">
+        </div>
     <main id="contenedor-productos"></main>
                                                                                                                                                                                                        
   <!-- <input type="number" min = 0> -->
@@ -55,13 +58,14 @@
   <div class="modal-contenedor">
     <div class="modal-carrito">
       <h3>Carrito</h3>
-      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+      <button id="carritoCerrar">x<i class="fas fa-times-circle"></i></button>
   <div id="carrito-contenedor">
   </div>
   
   <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-  <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
-  <button id="compra2" class="boton-agregar">Comprar</button>
+  <button id="vaciar-carrito" class="boton-agregar2">Vaciar carrito <i class="fas fa-plus"></i></button>
+  <button id="compra2" class="boton-agregar2">Comprar <i class="fas fa-plus"></i></button>
+  
   </div>
 
   </div>
@@ -89,7 +93,6 @@
     <script src="./js/FechasEspeciales.js"></script>
 <script src="./js/modal.js"></script>
 <script src="./js/app.js"></script>
-<script src="./js/buscador.js"></script>
 <script src="./js/animacion.js"></script>
 
 </header>

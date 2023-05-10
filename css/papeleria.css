@@ -127,11 +127,16 @@ img {
   margin-bottom: 10px;
 }
 
+
 .logo{
   width: 20%;
   height: 20%;
   display: flex;
   margin-bottom: 36px;
+}
+.carritoicon{
+  position: relative;
+  right: 5px;
 }
 #boton-carrito {
   border: none;
@@ -144,6 +149,7 @@ img {
   top: 20px;
   position: fixed;
   height: 48px;
+  width: 48px;
   left: 90%;
   z-index: 9999;
 }
@@ -162,6 +168,16 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px; /* agregar un espacio entre los productos */
+}
+.contadorCarrito {
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 12px;
 }
 
 .producto {
@@ -229,54 +245,117 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  left: 4px;
-  background-color: rgba(0, 0, 0, 0.3);
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.839);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .5s;
+  transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 9999;
 }
+
 .modal-active {
   opacity: 1;
   visibility: visible;
 }
+
 .modal-carrito {
   position: relative;
   background-color: rgb(206, 120, 196);
   min-width: 40%;
   padding: 1%;
   margin-top: -100%;
-  transition: all .5s;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .modal-active .modal-carrito {
   margin-top: 0;
 }
+
 .modal-carrito h3 {
   color: #000000;
   padding-bottom: 5px;
+  margin-top: 0;
+  text-align: center;
 }
+
 .modal-carrito #carritoCerrar {
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 6px;
+  right: 5px;
   font-size: 20px;
   color: #ffffff;
   border: none;
   background-color: #9d468e;
+  border-radius: 50%;
+  padding: 5px;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
 }
+
 .modal-carrito #carritoCerrar:hover {
   cursor: pointer;
+  background-color: #c24f4f;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
 .modal-carrito #carritoCerrar:focus {
   outline: none;
 }
 .modal-carrito .precioProducto {
   padding-top: 10px;
-  
 }
+
+.boton-agregar {
+  background-color: #9d468e;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-agregar:hover {
+  background-color: #df7fc2;
+}
+
+
+.productoEnCarrito {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.boton-mas{
+  background-color: #9d468e;
+  position: relative;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  height: 35px;
+  right: 9px;
+  top: 4px;
+  width: 30px;
+  transition: background-color 0.3s;
+}
+.boton-mas:hover {
+  background-color: #ab2d85ba;
+}
+
 .productoEnCarrito {
   border-left: 5px solid #9d468e;
   border-bottom-left-radius: 3px;
@@ -290,17 +369,30 @@ img {
   border-left: 5px solid #ffffff;
 }
 .boton-eliminar {
-  font-size: 20px;
-  color: #91e41c;
-  background-color: #980000;
+  background-color: #9d468e;
+  position: relative;
+  color: #ffffff;
   border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  height: 35px;
+  left: 35px;
+  top: 4px;
+  width: 30px;
+  transition: background-color 0.3s;
 }
+
 .boton-eliminar:hover {
   cursor: pointer;
+  background-color: #ab2d85ba;
 }
+
 .boton-eliminar:focus {
   outline: none;
 }
+
 .boton-agregar {
   font-size: 15px;
   color: rgb(255, 255, 255);
@@ -378,10 +470,25 @@ footer ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.784) 0%, rgba(0, 0, 0, 0.87) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.944) 0%, rgba(0, 0, 0, 0.87) 100%);
   z-index: 1;
 }
+.boton-agregar2{
+  background-color: #9d468e;
+  position: relative;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  left: 250px;
+  transition: background-color 0.3s;
+}
 
+.boton-agregar2:hover {
+  background-color: #761d5bba;
+}
 .slide img {
   position: absolute;
   top: 0;

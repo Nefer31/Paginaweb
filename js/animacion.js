@@ -1,3 +1,4 @@
+// Animacion de slider
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 const slideInterval = setInterval(nextSlide, 3000);
