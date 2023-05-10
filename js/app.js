@@ -32,7 +32,7 @@ compra2.addEventListener('click', () => {
         alert("Su compra ha sido realizada")
     }
     else {carrito.length === 0}
-    alert("No tiene productos en el carrito")
+    location.replace('https://api.whatsapp.com/send?phone=573043277960&text=Hola!%20Feliz%20d%C3%ADa%2C%20deseo%20informaci%C3%B3n%20sobre%20los%20productos%20que%20ofrecen');
     actualizarCarrito()
 })
 
@@ -90,7 +90,7 @@ const actualizarCarrito = () => {
         div.className = ('productoEnCarrito')
         div.innerHTML = `
         <p>${prod.nombre}</p>
-        <p>Precio:$${prod.precio}</p>
+        <p>Precio:$${prod.precio.toLocaleString('es-CO')}</p>
         <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
         <button onclick ="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
         <button onclick ="agregarAlCarrito(${prod.id})" class="boton-agregar"><i class="fas fa-shopping-cart"></i></button>
@@ -102,24 +102,7 @@ const actualizarCarrito = () => {
 contadorCarrito.innerText = carrito.length
 
 console.log(carrito)
-precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0).toLocaleString('es-CO')
 
 }
-
-const filterXprice=document.getElementById('filterXPrice');
-filterXPrice.addEventListener('change',filterProducts);
-
-function filterProducts(event) {
-    const responseFilter = event.target.value === 'Menores a 1600'
-    ? stockProductos.filter(stockProductos => stockProductos.precio < 1600)
-    : event.target.value === 'Entre 1100 y 1200'
-    ? stockProductos.filter (stockProductos => stockProductos.precio >= 1100 && stockProductos.precio <= 1200 )
-    : event.target.value === 'Mayores a 1000'
-    ? stockProductos.filter(stockProductos => stockProductos.precio > 1000)
-    :null;
-    document.querySelector("#contenedor-productos").innerHTML = '';
-
-    responseFilter.forEach(stockProductos => stockProductos.innerHTML += (stockProductos));
-}
-// contenedorProductos.innerHTML= '';
 
