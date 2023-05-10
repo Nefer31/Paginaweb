@@ -94,24 +94,28 @@ const vaciarCarrito = () => {
 };
 
 const actualizarCarrito = () => {
-    contenedorCarrito.innerHTML = "";
-    
-    carrito.forEach((prod) => {
-        const div = document.createElement('div')
-        div.className = ('productoEnCarrito')
-        div.innerHTML = `
-        <p>${prod.nombre}</p>
-        <p>Precio: $ ${prod.precio.toLocaleString('es-CO')}</p>
-        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-        <button onclick ="eliminarDelCarrito(${prod.id})" class="boton-eliminar">-<i class="fas fa-trash-alt"></i></button>
-        <button onclick ="agregarAlCarrito(${prod.id})" class="boton-mas">+<i class="fas fa-shopping-cart"></i></button>
-        `  
+  contenedorCarrito.innerHTML = "";
 
-        contenedorCarrito.appendChild(div)
-        
+  if (carrito.length === 0) {
+    const mensaje = document.createElement('p');
+    mensaje.textContent = "No tiene productos en el carrito.";
+    contenedorCarrito.appendChild(mensaje);
+  } else {
+    carrito.forEach((prod) => {
+      const div = document.createElement('div');
+      div.className = 'productoEnCarrito';
+      div.innerHTML = `
+        <p>${prod.nombre}</p>
+        <p>Precio: COP ${prod.precio.toLocaleString('es-CO')}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar">-<i class="fas fa-trash-alt"></i></button>
+        <button onclick="agregarAlCarrito(${prod.id})" class="boton-mas">+<i class="fas fa-shopping-cart"></i></button>
+      `;
+      contenedorCarrito.appendChild(div);
     });
+  }
     contadorCarrito.innerText = carrito.length;
-    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0).toLocaleString('es-CO');
+    precioTotal.innerText = ` ${carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0).toLocaleString('es-CO')} COP`;
   
     localStorage.setItem('carrito', JSON.stringify(carrito));
   };
@@ -148,8 +152,14 @@ const actualizarCarrito = () => {
   
         const boton = document.getElementById(`agregar${producto.id}`);
   
-        boton.addEventListener('keyup', () => {
+        boton.addEventListener('click', () => {
           agregarAlCarrito(producto.id);
+        });
+  
+        boton.addEventListener('keyup', (event) => {
+          if (event.key === "Enter") {
+            agregarAlCarrito(producto.id);
+          }
         });
       });
     }
